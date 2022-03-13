@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //별도 변수로 관리하는것 보다
+        var options = {
+            el: '#app',
+            data: {
+                message: 'hi'
+            },
+        }
+        var vm1 = new Vue(options);
+
+        //객체 리터럴로 관리하는게 좀더 가독성이 좋음
+        var vm2 = new Vue({
+            el: '#app',
+            data: {
+                message: 'hi'
+            },
+            created: function() {
+                console.log("생성!!!");
+            }
+        });
+    </script>
+</body>
+
+</html>
